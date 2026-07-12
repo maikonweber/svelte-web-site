@@ -6,6 +6,8 @@
 		{ href: '/#servicos', label: 'Serviços' },
 		{ href: '/#produtos', label: 'Produtos' },
 		{ href: '/#experiencias', label: 'Experiências' },
+		{ href: '/about', label: 'About me' },
+		{ href: '/blog', label: 'Blog' },
 		{ href: '/#contato', label: 'Contato' }
 	];
 
@@ -16,11 +18,19 @@
 	<ul class="nav-list">
 		{#each navLinks as link}
 			<li class="nav-item">
-				<a
+	<a
 					href={link.href}
 					class="nav-link"
-					class:active={link.href === '/' && currentPath === '/'}
-					aria-current={link.href === '/' && currentPath === '/' ? 'page' : undefined}
+					class:active={(link.href === '/' && currentPath === '/') ||
+						(link.href === '/blog' && currentPath.startsWith('/blog')) ||
+						(link.href === '/about' && currentPath.startsWith('/about'))}
+					aria-current={
+						(link.href === '/' && currentPath === '/') ||
+						(link.href === '/blog' && currentPath.startsWith('/blog')) ||
+						(link.href === '/about' && currentPath.startsWith('/about'))
+							? 'page'
+							: undefined
+					}
 				>
 					{link.label}
 				</a>

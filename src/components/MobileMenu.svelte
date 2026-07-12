@@ -11,6 +11,8 @@
 		{ href: '/#servicos', label: 'Serviços' },
 		{ href: '/#produtos', label: 'Produtos' },
 		{ href: '/#experiencias', label: 'Experiências' },
+		{ href: '/about', label: 'About me' },
+		{ href: '/blog', label: 'Blog' },
 		{ href: '/#contato', label: 'Contato' }
 	];
 

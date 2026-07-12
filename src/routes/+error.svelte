@@ -11,7 +11,7 @@
     { href: '/', label: t('LAYOUT.NAV.HOME'), icon: '🏠' },
     { href: '/shop', label: t('LAYOUT.NAV.SHOP'), icon: '🛍️' },
     { href: '/blog', label: t('LAYOUT.NAV.BLOG'), icon: '📝' },
-    { href: '/tree', label: t('LAYOUT.NAV.LINKS'), icon: '🌳' },
+    { href: '/about', label: 'About me', icon: '👤' },
     { href: '/task-doro', label: t('LAYOUT.NAV.TASK_DORO'), icon: '⏰' }
   ];
 

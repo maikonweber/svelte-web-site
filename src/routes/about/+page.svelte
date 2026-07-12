@@ -1,39 +1,39 @@
 <script>
 	import { fly, fade } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
-	import { TREE_PROFILE, TREE_SECTIONS } from './links.js';
+	import { PROFILE, LINK_SECTIONS } from './links.js';
 </script>
 
 <svelte:head>
-	<title>Maikon Weber — Links | MutterCorp</title>
+	<title>About me — Maikon Weber | MutterCorp</title>
 	<meta
 		name="description"
-		content="Links úteis de Maikon Weber de Carvalho: produtos MutterCorp, contato, LinkedIn, GitHub e experiências em software, IA e sistemas distribuídos."
+		content="About me: Maikon Weber de Carvalho — Senior Software Engineer, Solutions Architect e fundador da MutterCorp. Produtos, experiências e links."
 	/>
 	<meta
 		name="keywords"
-		content="Maikon Weber, Maikon Weber de Carvalho, MutterCorp, linktree, Full Stack, NestJS, LinkedIn"
+		content="Maikon Weber, About me, MutterCorp, Full Stack, NestJS, LinkedIn"
 	/>
 </svelte:head>
 
-<div class="tree">
+<div class="about-page">
 	<header class="hero" in:fade={{ duration: 400 }}>
 		<img
 			class="avatar"
-			src={TREE_PROFILE.photo}
-			alt={TREE_PROFILE.name}
+			src={PROFILE.photo}
+			alt={PROFILE.name}
 			width="112"
 			height="112"
 		/>
-		<p class="eyebrow">Link em bio</p>
-		<h1>{TREE_PROFILE.name}</h1>
-		<p class="role">{TREE_PROFILE.role}</p>
-		<p class="location">{TREE_PROFILE.location}</p>
+		<p class="eyebrow">About me</p>
+		<h1>{PROFILE.name}</h1>
+		<p class="role">{PROFILE.role}</p>
+		<p class="location">{PROFILE.location}</p>
 	</header>
 
-	<section class="about" in:fly={{ y: 24, duration: 500, delay: 80, easing: cubicOut }}>
+	<section class="bio" in:fly={{ y: 24, duration: 500, delay: 80, easing: cubicOut }}>
 		<h2>Sobre mim</h2>
-		{#each TREE_PROFILE.about as paragraph}
+		{#each PROFILE.about as paragraph}
 			<p>{paragraph}</p>
 		{/each}
 		<ul class="tags">
@@ -45,7 +45,7 @@
 		</ul>
 	</section>
 
-	{#each TREE_SECTIONS as section, i}
+	{#each LINK_SECTIONS as section, i}
 		<section
 			class="section"
 			aria-labelledby="sec-{section.id}"
@@ -82,7 +82,7 @@
 </div>
 
 <style>
-	.tree {
+	.about-page {
 		--ink: var(--site-bg);
 		--paper: var(--site-fg);
 		--muted: var(--site-muted);
@@ -99,14 +99,22 @@
 		color: var(--paper);
 	}
 
-	.tree::before {
+	.about-page::before {
 		content: '';
 		position: absolute;
 		inset: -2rem -1rem auto;
 		height: 18rem;
 		background:
-			radial-gradient(ellipse 70% 60% at 20% 0%, color-mix(in srgb, var(--site-orb-a) 35%, transparent), transparent),
-			radial-gradient(ellipse 60% 50% at 90% 20%, color-mix(in srgb, var(--site-orb-b) 28%, transparent), transparent);
+			radial-gradient(
+				ellipse 70% 60% at 20% 0%,
+				color-mix(in srgb, var(--site-orb-a) 35%, transparent),
+				transparent
+			),
+			radial-gradient(
+				ellipse 60% 50% at 90% 20%,
+				color-mix(in srgb, var(--site-orb-b) 28%, transparent),
+				transparent
+			);
 		pointer-events: none;
 		z-index: -1;
 	}
@@ -132,7 +140,7 @@
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 		font-weight: 600;
-		color: var(--muted);
+		color: var(--accent-soft);
 	}
 
 	h1 {
@@ -159,7 +167,7 @@
 		font-weight: 600;
 	}
 
-	.about {
+	.bio {
 		margin-bottom: 2.25rem;
 		padding: 1.35rem 1.25rem;
 		background: var(--surface);
@@ -167,7 +175,7 @@
 		border-radius: 0.5rem;
 	}
 
-	.about h2,
+	.bio h2,
 	.section h2 {
 		font-family: 'Syne', sans-serif;
 		font-size: 0.78rem;
@@ -178,14 +186,14 @@
 		color: var(--muted);
 	}
 
-	.about p {
+	.bio p {
 		margin: 0 0 0.75rem;
 		color: var(--paper);
 		line-height: 1.65;
 		font-size: 0.95rem;
 	}
 
-	.about p:last-of-type {
+	.bio p:last-of-type {
 		margin-bottom: 1rem;
 	}
 
@@ -286,7 +294,7 @@
 	}
 
 	@media (max-width: 480px) {
-		.tree {
+		.about-page {
 			padding: 1.75rem 1rem 3rem;
 		}
 

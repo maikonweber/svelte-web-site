@@ -1,10 +1,11 @@
 /**
- * Links da página /tree (link-in-bio).
+ * Links da página /about (About me).
  * Altere URLs aqui — a página importa este arquivo.
  */
 import { PRODUCT_URLS } from '$lib/products.js';
+import { SOCIAL_URLS } from '$lib/medium.js';
 
-export const TREE_PROFILE = {
+export const PROFILE = {
 	name: 'Maikon Weber',
 	fullName: 'Maikon Weber de Carvalho',
 	role: 'Senior Software Engineer · Solutions Architect · Fundador da MutterCorp',
@@ -16,15 +17,17 @@ export const TREE_PROFILE = {
 	]
 };
 
-export const TREE_URLS = {
+export const ABOUT_URLS = {
 	site: '/',
+	blog: '/blog',
 	whatsapp:
 		'https://wa.me/5511915009625?text=' +
-		encodeURIComponent('Olá Maikon! Vi seu linktree e quero conversar.'),
-	email: 'mailto:muttercorp@gmail.com',
-	linkedin: 'https://www.linkedin.com/in/maikonwebercorp/',
-	github: 'https://github.com/maikonweber',
-	x: 'https://x.com/MaikonWeber1',
+		encodeURIComponent('Olá Maikon! Vi seu About me e quero conversar.'),
+	email: SOCIAL_URLS.email,
+	linkedin: SOCIAL_URLS.linkedin,
+	github: SOCIAL_URLS.github,
+	x: SOCIAL_URLS.x,
+	medium: SOCIAL_URLS.medium,
 	cv: '/Profile.pdf',
 	emotiveCare: PRODUCT_URLS.emotiveCare,
 	jyhhad: PRODUCT_URLS.jyhhad,
@@ -36,23 +39,23 @@ export const TREE_URLS = {
 	grupoPll: 'https://grupopll.com.br'
 };
 
-/** @typedef {{ label: string, href: string, hint?: string, external?: boolean, download?: boolean }} TreeLink */
+/** @typedef {{ label: string, href: string, hint?: string, external?: boolean, download?: boolean }} AboutLink */
 
-/** @type {{ id: string, title: string, links: TreeLink[] }[]} */
-export const TREE_SECTIONS = [
+/** @type {{ id: string, title: string, links: AboutLink[] }[]} */
+export const LINK_SECTIONS = [
 	{
 		id: 'contato',
 		title: 'Contato',
 		links: [
-			{ label: 'WhatsApp', href: TREE_URLS.whatsapp, hint: 'Fale comigo agora', external: true },
-			{ label: 'E-mail', href: TREE_URLS.email, hint: 'muttercorp@gmail.com' },
+			{ label: 'WhatsApp', href: ABOUT_URLS.whatsapp, hint: 'Fale comigo agora', external: true },
+			{ label: 'E-mail', href: ABOUT_URLS.email, hint: 'muttercorp@gmail.com' },
 			{
 				label: 'LinkedIn',
-				href: TREE_URLS.linkedin,
+				href: ABOUT_URLS.linkedin,
 				hint: 'Currículo e recomendações',
 				external: true
 			},
-			{ label: 'Baixar CV', href: TREE_URLS.cv, hint: 'PDF', download: true }
+			{ label: 'Baixar CV', href: ABOUT_URLS.cv, hint: 'PDF', download: true }
 		]
 	},
 	{
@@ -61,29 +64,29 @@ export const TREE_SECTIONS = [
 		links: [
 			{
 				label: 'EmotiveCare',
-				href: TREE_URLS.emotiveCare,
+				href: ABOUT_URLS.emotiveCare,
 				hint: 'Saúde emocional com IA',
 				external: true
 			},
 			{
 				label: 'Jyhhad',
-				href: TREE_URLS.jyhhad,
+				href: ABOUT_URLS.jyhhad,
 				hint: 'Vampire: The Eternal Struggle online',
 				external: true
 			},
 			{
 				label: 'Notice',
-				href: TREE_URLS.noticiaApi,
+				href: ABOUT_URLS.noticiaApi,
 				hint: 'Agregador de notícias + API',
 				external: true
 			},
 			{
 				label: 'BarberSync',
-				href: TREE_URLS.barbeiroShop,
+				href: ABOUT_URLS.barbeiroShop,
 				hint: 'CRM e WhatsApp para barbearias',
 				external: true
 			},
-			{ label: 'Site MutterCorp', href: TREE_URLS.site, hint: 'Produtos, serviços e experiências' }
+			{ label: 'Site MutterCorp', href: ABOUT_URLS.site, hint: 'Produtos, serviços e experiências' }
 		]
 	},
 	{
@@ -92,25 +95,25 @@ export const TREE_SECTIONS = [
 		links: [
 			{
 				label: 'Abbiamo',
-				href: TREE_URLS.abbiamolog,
+				href: ABOUT_URLS.abbiamolog,
 				hint: 'Logística · e-commerce · atual',
 				external: true
 			},
 			{
 				label: 'Smart Sky',
-				href: TREE_URLS.smartSky,
+				href: ABOUT_URLS.smartSky,
 				hint: 'Infra de dados · geoespacial',
 				external: true
 			},
 			{
 				label: 'Group Link One',
-				href: TREE_URLS.groupLinkOne,
+				href: ABOUT_URLS.groupLinkOne,
 				hint: 'AIoT · telemetria',
 				external: true
 			},
 			{
 				label: 'Grupo PLL',
-				href: TREE_URLS.grupoPll,
+				href: ABOUT_URLS.grupoPll,
 				hint: 'BPO · telecom',
 				external: true
 			}
@@ -120,8 +123,15 @@ export const TREE_SECTIONS = [
 		id: 'redes',
 		title: 'Redes',
 		links: [
-			{ label: 'GitHub', href: TREE_URLS.github, hint: '@maikonweber', external: true },
-			{ label: 'X / Twitter', href: TREE_URLS.x, hint: '@MaikonWeber1', external: true }
+			{
+				label: 'Medium',
+				href: ABOUT_URLS.medium,
+				hint: 'Blog e artigos',
+				external: true
+			},
+			{ label: 'Blog no site', href: ABOUT_URLS.blog, hint: 'Últimos posts' },
+			{ label: 'GitHub', href: ABOUT_URLS.github, hint: '@maikonweber', external: true },
+			{ label: 'X / Twitter', href: ABOUT_URLS.x, hint: '@MaikonWeber1', external: true }
 		]
 	}
 ];

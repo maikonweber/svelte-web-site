@@ -1,4 +1,6 @@
 <script>
+	import { SOCIAL_URLS } from '$lib/medium.js';
+
 	const whatsappUrl =
 		'https://wa.me/5511915009625?text=' +
 		encodeURIComponent(
@@ -7,9 +9,10 @@
 
 	const socialLinks = [
 		{ href: whatsappUrl, label: 'WhatsApp' },
-		{ href: 'mailto:muttercorp@gmail.com', label: 'E-mail' },
-		{ href: 'https://github.com/maikonweber', label: 'GitHub' },
-		{ href: 'https://www.linkedin.com/in/maikonwebercorp/', label: 'LinkedIn' }
+		{ href: SOCIAL_URLS.email, label: 'E-mail' },
+		{ href: SOCIAL_URLS.medium, label: 'Medium' },
+		{ href: SOCIAL_URLS.github, label: 'GitHub' },
+		{ href: SOCIAL_URLS.linkedin, label: 'LinkedIn' }
 	];
 </script>
 

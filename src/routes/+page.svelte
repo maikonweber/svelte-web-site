@@ -3,6 +3,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { quintOut, cubicOut } from 'svelte/easing';
 	import { products } from '$lib/products.js';
+	import { SOCIAL_URLS } from '$lib/medium.js';
 
 	let mounted = $state(false);
 	let servicesVisible = $state(false);
@@ -125,7 +126,7 @@
 					<a href={whatsappUrl} class="cta-primary" target="_blank" rel="noopener noreferrer"
 						>Quero um orçamento</a
 					>
-					<a href="#servicos" class="cta-ghost">Ver como funciona</a>
+					<a href="/about" class="cta-ghost">About me</a>
 				</div>
 			</div>
 		</section>
@@ -263,15 +264,12 @@
 				</div>
 
 				<div class="socials" in:fade={{ duration: 450, delay: 250 }}>
-					<a href="https://github.com/maikonweber" target="_blank" rel="noopener noreferrer"
-						>GitHub</a
-					>
-					<a
-						href="https://www.linkedin.com/in/maikonwebercorp/"
-						target="_blank"
-						rel="noopener noreferrer">LinkedIn</a
-					>
-					<a href="https://x.com/MaikonWeber1" target="_blank" rel="noopener noreferrer">X</a>
+					<a href="/about">About me</a>
+					<a href="/blog">Blog</a>
+					<a href={SOCIAL_URLS.medium} target="_blank" rel="noopener noreferrer">Medium</a>
+					<a href={SOCIAL_URLS.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+					<a href={SOCIAL_URLS.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+					<a href={SOCIAL_URLS.x} target="_blank" rel="noopener noreferrer">X</a>
 				</div>
 			</div>
 		{/if}
