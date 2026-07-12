@@ -1,14 +1,7 @@
 <script>
-	import { onMount } from 'svelte';
 	import { fly, fade } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import { TREE_PROFILE, TREE_SECTIONS } from './links.js';
-
-	let mounted = $state(false);
-
-	onMount(() => {
-		mounted = true;
-	});
 </script>
 
 <svelte:head>
@@ -24,70 +17,68 @@
 </svelte:head>
 
 <div class="tree">
-	{#if mounted}
-		<header class="hero" in:fade={{ duration: 400 }}>
-			<img
-				class="avatar"
-				src={TREE_PROFILE.photo}
-				alt={TREE_PROFILE.name}
-				width="112"
-				height="112"
-			/>
-			<p class="eyebrow">Link em bio</p>
-			<h1>{TREE_PROFILE.name}</h1>
-			<p class="role">{TREE_PROFILE.role}</p>
-			<p class="location">{TREE_PROFILE.location}</p>
-		</header>
+	<header class="hero" in:fade={{ duration: 400 }}>
+		<img
+			class="avatar"
+			src={TREE_PROFILE.photo}
+			alt={TREE_PROFILE.name}
+			width="112"
+			height="112"
+		/>
+		<p class="eyebrow">Link em bio</p>
+		<h1>{TREE_PROFILE.name}</h1>
+		<p class="role">{TREE_PROFILE.role}</p>
+		<p class="location">{TREE_PROFILE.location}</p>
+	</header>
 
-		<section class="about" in:fly={{ y: 24, duration: 500, delay: 80, easing: cubicOut }}>
-			<h2>Sobre mim</h2>
-			{#each TREE_PROFILE.about as paragraph}
-				<p>{paragraph}</p>
-			{/each}
-			<ul class="tags">
-				<li>NestJS</li>
-				<li>Kafka</li>
-				<li>Sistemas distribuídos</li>
-				<li>Full Stack</li>
-				<li>IA / RAG</li>
+	<section class="about" in:fly={{ y: 24, duration: 500, delay: 80, easing: cubicOut }}>
+		<h2>Sobre mim</h2>
+		{#each TREE_PROFILE.about as paragraph}
+			<p>{paragraph}</p>
+		{/each}
+		<ul class="tags">
+			<li>NestJS</li>
+			<li>Kafka</li>
+			<li>Sistemas distribuídos</li>
+			<li>Full Stack</li>
+			<li>IA / RAG</li>
+		</ul>
+	</section>
+
+	{#each TREE_SECTIONS as section, i}
+		<section
+			class="section"
+			aria-labelledby="sec-{section.id}"
+			in:fly={{ y: 28, duration: 500, delay: 120 + i * 70, easing: cubicOut }}
+		>
+			<h2 id="sec-{section.id}">{section.title}</h2>
+			<ul class="link-list">
+				{#each section.links as link}
+					<li>
+						<a
+							href={link.href}
+							class="link-row"
+							target={link.external ? '_blank' : undefined}
+							rel={link.external ? 'noopener noreferrer' : undefined}
+							download={link.download || undefined}
+						>
+							<span class="link-main">
+								<span class="link-label">{link.label}</span>
+								{#if link.hint}
+									<span class="link-hint">{link.hint}</span>
+								{/if}
+							</span>
+							<span class="link-arrow" aria-hidden="true">→</span>
+						</a>
+					</li>
+				{/each}
 			</ul>
 		</section>
+	{/each}
 
-		{#each TREE_SECTIONS as section, i}
-			<section
-				class="section"
-				aria-labelledby="sec-{section.id}"
-				in:fly={{ y: 28, duration: 500, delay: 120 + i * 70, easing: cubicOut }}
-			>
-				<h2 id="sec-{section.id}">{section.title}</h2>
-				<ul class="link-list">
-					{#each section.links as link}
-						<li>
-							<a
-								href={link.href}
-								class="link-row"
-								target={link.external ? '_blank' : undefined}
-								rel={link.external ? 'noopener noreferrer' : undefined}
-								download={link.download || undefined}
-							>
-								<span class="link-main">
-									<span class="link-label">{link.label}</span>
-									{#if link.hint}
-										<span class="link-hint">{link.hint}</span>
-									{/if}
-								</span>
-								<span class="link-arrow" aria-hidden="true">→</span>
-							</a>
-						</li>
-					{/each}
-				</ul>
-			</section>
-		{/each}
-
-		<p class="foot-note" in:fade={{ duration: 400, delay: 400 }}>
-			MutterCorp · desde 2018
-		</p>
-	{/if}
+	<p class="foot-note" in:fade={{ duration: 400, delay: 400 }}>
+		MutterCorp · desde 2018
+	</p>
 </div>
 
 <style>

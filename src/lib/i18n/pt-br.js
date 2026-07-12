@@ -268,7 +268,7 @@ export const TEXTS_PT_BR = {
         TITLE: 'Visão do Fundador',
         FOUNDED_IN: 'Fundada em',
         FOUNDER: 'Maikon Weber',
-        EMAIL: 'mutter.corp@gmail.com'
+        EMAIL: 'muttercorp@gmail.com'
       },
       COMPANY_VALUES: {
         TITLE: 'Valores da Empresa'

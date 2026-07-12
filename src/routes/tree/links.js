@@ -12,7 +12,7 @@ export const TREE_PROFILE = {
 	photo: 'https://avatars.githubusercontent.com/u/45263705?v=4',
 	about: [
 		'Sou desenvolvedor full stack e arquiteto de soluções, com foco em NestJS, Kafka e sistemas distribuídos. Fundei a MutterCorp para transformar ideias em produtos digitais — de APIs e painéis a SaaS com IA.',
-		'Hoje atuo na Smart Sky com infraestrutura de dados e soluções geoespaciais. Já passei por operações de logística (Abbiamo), AIoT (Group Link One) e BPO/telecom (Grupo PLL), sempre entregando software que resolve problema real de negócio.'
+		'Hoje atuo na Abbiamo com infraestrutura logística para e-commerce. Já passei por dados geoespaciais (Smart Sky), AIoT (Group Link One) e BPO/telecom (Grupo PLL), sempre entregando software que resolve problema real de negócio.'
 	]
 };
 
@@ -21,7 +21,7 @@ export const TREE_URLS = {
 	whatsapp:
 		'https://wa.me/5511915009625?text=' +
 		encodeURIComponent('Olá Maikon! Vi seu linktree e quero conversar.'),
-	email: 'mailto:mutter.corp@gmail.com',
+	email: 'mailto:muttercorp@gmail.com',
 	linkedin: 'https://www.linkedin.com/in/maikonwebercorp/',
 	github: 'https://github.com/maikonweber',
 	x: 'https://x.com/MaikonWeber1',
@@ -45,7 +45,7 @@ export const TREE_SECTIONS = [
 		title: 'Contato',
 		links: [
 			{ label: 'WhatsApp', href: TREE_URLS.whatsapp, hint: 'Fale comigo agora', external: true },
-			{ label: 'E-mail', href: TREE_URLS.email, hint: 'mutter.corp@gmail.com' },
+			{ label: 'E-mail', href: TREE_URLS.email, hint: 'muttercorp@gmail.com' },
 			{
 				label: 'LinkedIn',
 				href: TREE_URLS.linkedin,
@@ -91,15 +91,15 @@ export const TREE_SECTIONS = [
 		title: 'Experiência',
 		links: [
 			{
-				label: 'Smart Sky',
-				href: TREE_URLS.smartSky,
-				hint: 'Infra de dados · geoespacial · atual',
+				label: 'Abbiamo',
+				href: TREE_URLS.abbiamolog,
+				hint: 'Logística · e-commerce · atual',
 				external: true
 			},
 			{
-				label: 'Abbiamo',
-				href: TREE_URLS.abbiamolog,
-				hint: 'Logística e e-commerce',
+				label: 'Smart Sky',
+				href: TREE_URLS.smartSky,
+				hint: 'Infra de dados · geoespacial',
 				external: true
 			},
 			{

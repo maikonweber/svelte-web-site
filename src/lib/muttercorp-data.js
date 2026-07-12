@@ -5,14 +5,14 @@ export const COMPANY_INFO = {
   name: 'MutterCorp',
   fullName: 'Mutter Corporation',
   founder: 'Maikon Weber',
-  email: 'mutter.corp@gmail.com',
+  email: 'muttercorp@gmail.com',
   foundedYear: 2018,
   vision: 'Ser a pioneira em tecnologia no BRASIL - A NASA brasileira!',
   mission: 'Soluções tecnológicas efetivas e baixo custo permitindo o acesso a diversos tipos de público'
 };
 
 export const FOUNDER_MESSAGE = {
-  from: 'Maikon Weber <mutter.corp@gmail.com>',
+  from: 'Maikon Weber <muttercorp@gmail.com>',
   date: 'qui., 24 de mai. de 2018, 01:03',
   to: ['elvislpg2016', 'Luan', 'Derik', 'Dai'],
   subject: 'Fundação da MutterCorp - Visão Revolucionária',
@@ -71,7 +71,7 @@ export const TEAM_MEMBERS = {
   founder: {
     name: 'Maikon Weber',
     roles: ['Fundador', 'CTO', 'Desenvolvedor'],
-    email: 'mutter.corp@gmail.com'
+    email: 'muttercorp@gmail.com'
   },
   projectManager: {
     name: 'Noobie Domingos',

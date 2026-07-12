@@ -3,7 +3,7 @@
 
 export const FOUNDER_HISTORIC_EMAIL = {
   metadata: {
-    from: 'Maikon Weber <mutter.corp@gmail.com>',
+    from: 'Maikon Weber <muttercorp@gmail.com>',
     date: 'qui., 24 de mai. de 2018, 01:03',
     to: ['elvislpg2016', 'Luan', 'Derik', 'Dai'],
     subject: 'Fundação da MutterCorp - Visão Revolucionária'

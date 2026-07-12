@@ -47,7 +47,7 @@
 			url: 'https://abbiamolog.com/',
 			tag: 'Logística · E-commerce · Atual',
 			report:
-				'Experiência mais recente: atuação na infraestrutura logística pós-compra para o e-commerce brasileiro — orquestração de entregas, cotação inteligente e integração com centenas de transportadoras para transformar SAC em retenção e operação em escala.'
+				'Experiência atual: atuação na infraestrutura logística pós-compra para o e-commerce brasileiro — orquestração de entregas, cotação inteligente e integração com centenas de transportadoras para transformar SAC em retenção e operação em escala.'
 		},
 		{
 			name: 'Smart Sky',
