@@ -96,6 +96,7 @@
   --site-jyhhad-tag: #9a3d4e;
   --site-noticia-tag: #2f5f7a;
   --site-barbeiro-tag: #8a6640;
+  --site-clips-tag: #5a3f8a;
   --site-ghost-border: rgba(12, 18, 16, 0.18);
   --site-link-underline: rgba(12, 18, 16, 0.28);
 }
@@ -165,6 +166,7 @@
   --site-jyhhad-tag: #d48a96;
   --site-noticia-tag: #7eb0d0;
   --site-barbeiro-tag: #d4a87a;
+  --site-clips-tag: #b49ae0;
   --site-ghost-border: rgba(232, 239, 233, 0.22);
   --site-link-underline: rgba(232, 239, 233, 0.3);
 }

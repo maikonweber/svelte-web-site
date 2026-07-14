@@ -6,7 +6,8 @@ export const PRODUCT_URLS = {
 	emotiveCare: 'https://emotivecare.com.br',
 	jyhhad: 'https://jyhhad.muttercorp.com.br',
 	noticiaApi: 'https://noticia-api.vercel.app/',
-	barbeiroShop: 'https://barbeiro-shop-seven.vercel.app/'
+	barbeiroShop: 'https://barbeiro-shop-seven.vercel.app/',
+	mutterClips: 'https://twitchcliper-three.vercel.app/dashboard/clips'
 };
 
 /** @type {Array<{ name: string, url: string, tag: string, summary: string, points: string[], accent: string }>} */
@@ -46,5 +47,14 @@ export const products = [
 			'Agenda online, CRM e atendimento WhatsApp com IA para barbearias — recupere clientes e transforme a operação em crescimento.',
 		points: ['Agenda online', 'CRM da barbearia', 'WhatsApp com IA'],
 		accent: 'barbeiro'
+	},
+	{
+		name: 'MutterClips',
+		url: PRODUCT_URLS.mutterClips,
+		tag: 'Twitch · Cortes · IA',
+		summary:
+			'Cortes automáticos de lives da Twitch: detecta os melhores momentos, gera clipes prontos para redes e organiza tudo num dashboard para creators.',
+		points: ['Cortes automáticos', 'Dashboard de clipes', 'Feito para creators'],
+		accent: 'clips'
 	}
 ];

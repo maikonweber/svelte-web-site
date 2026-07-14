@@ -287,6 +287,7 @@
 		--jyhhad: #8b3a4a;
 		--noticia: #3a6b8a;
 		--barbeiro: #a67c52;
+		--clips: #6b4fa0;
 		--surface: var(--site-surface);
 		--line: var(--site-line);
 		position: relative;
@@ -573,6 +574,10 @@
 		border-top: 2px solid var(--barbeiro);
 	}
 
+	.product-clips {
+		border-top: 2px solid var(--clips);
+	}
+
 	.tag {
 		display: inline-block;
 		font-size: 0.72rem;
@@ -596,6 +601,10 @@
 
 	.product-barbeiro .tag {
 		color: var(--site-barbeiro-tag);
+	}
+
+	.product-clips .tag {
+		color: var(--site-clips-tag);
 	}
 
 	.product-card h3,

@@ -33,6 +33,7 @@ export const ABOUT_URLS = {
 	jyhhad: PRODUCT_URLS.jyhhad,
 	noticiaApi: PRODUCT_URLS.noticiaApi,
 	barbeiroShop: PRODUCT_URLS.barbeiroShop,
+	mutterClips: PRODUCT_URLS.mutterClips,
 	abbiamolog: 'https://abbiamolog.com/',
 	smartSky: 'https://smartsky.com.br',
 	groupLinkOne: 'https://grouplinkone.com/',
@@ -84,6 +85,12 @@ export const LINK_SECTIONS = [
 				label: 'BarberSync',
 				href: ABOUT_URLS.barbeiroShop,
 				hint: 'CRM e WhatsApp para barbearias',
+				external: true
+			},
+			{
+				label: 'MutterClips',
+				href: ABOUT_URLS.mutterClips,
+				hint: 'Cortes automáticos de Twitch',
 				external: true
 			},
 			{ label: 'Site MutterCorp', href: ABOUT_URLS.site, hint: 'Produtos, serviços e experiências' }
